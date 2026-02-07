@@ -33,6 +33,17 @@
     </div>
   </main>
 
+  <script>
+   function launchGame(url) {
+  const win = window.open(url, "_blank");
+  if (!win) window.location.href = url;
+}
+
+function launchPRTY(url) {
+  const mode = localStorage.getItem("launchMode") || "_blank";
+  window.open(url, mode);
+}
+  </script>
   <script src="games.js"></script>
 </body>
 </html>
